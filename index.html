@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vegora connects home gardeners to buy and sell seeds, fresh fruits, vegetables and plants.">
+  <title>Vegora | Seeds, Fresh Produce & Home Garden</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="top-bar">🌱 A little greener, a little closer — shop from home gardeners</div>
+
+  <header class="navbar">
+    <a href="#home" class="logo" aria-label="Vegora home">
+      <img src="vegora-logo.png" alt="Vegora logo">
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Explore</a>
+      <a href="#about">Our Story</a>
+    </nav>
+
+    <div class="nav-actions">
+  <button class="cart-btn" id="authBtn" type="button">
+    👤 Login / Sign Up
+  </button>
+  <span id="userStatus" hidden></span>
+      <button class="cart-btn" id="cartBtn">
+        🛒 Basket <span id="cartCount">0</span>
+      </button>
+      <button class="sell-btn" id="openSell">+ Sell Item</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">✳ THE HOME GARDENING COMMUNITY</span>
+        <h1>Good things<br>grow <em>at home.</em></h1>
+        <p>
+          Discover fresh homegrown fruits, vegetables, seeds and plants.
+          Buy local, sell your harvest and grow something wonderful together.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#shop" class="primary-btn">Explore the garden →</a>
+          <button class="secondary-btn" id="heroSell">Start selling</button>
+        </div>
+
+        <div class="hero-note">🌿 Grown with care. Shared with love.</div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=85"
+          alt="A sunny home garden filled with plants">
+        <div class="floating-card">
+          <span class="float-icon">🌱</span>
+          <div>
+            <strong>Grow together</strong>
+            <p>Every garden has something to share.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>
+        <span>🍅</span>
+        <div><strong>Fresh from gardens</strong><p>Homegrown goodness</p></div>
+      </div>
+      <div>
+        <span>🤝</span>
+        <div><strong>Community first</strong><p>People helping people</p></div>
+      </div>
+      <div>
+        <span>🌍</span>
+        <div><strong>Grow more green</strong><p>Make gardening matter</p></div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE COMMUNITY MARKET</span>
+          <h2>Find your garden <em>favorites.</em></h2>
+          <p>Little treasures grown by people just like you.</p>
+        </div>
+        <button class="text-btn" id="showAll">View all items →</button>
+      </div>
+
+      <div class="search-row">
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="search"
+            placeholder="Search tomatoes, seeds, mangoes..."
+            aria-label="Search products">
+        </div>
+
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="default">Sort: Featured</option>
+          <option value="low">Price: Low to high</option>
+          <option value="high">Price: High to low</option>
+        </select>
+      </div>
+
+      <div class="categories" id="categories">
+        <button class="category active" data-category="All">🌿 Everything</button>
+        <button class="category" data-category="Seeds">🌱 Seeds</button>
+        <button class="category" data-category="Vegetables">🥬 Vegetables</button>
+        <button class="category" data-category="Fruits">🍓 Fruits</button>
+        <button class="category" data-category="Plants">🪴 Plants</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>
+        No garden goodies found. Try another search! 🌱
+      </p>
+    </section>
+
+    <section class="sell-banner" id="about">
+      <div class="banner-icon">🧺</div>
+      <div>
+        <span class="eyebrow">HAVE A LITTLE EXTRA?</span>
+        <h2>Your garden could make someone's day.</h2>
+        <p>
+          List your homegrown harvest and connect with people
+          who love fresh, local produce.
+        </p>
+      </div>
+      <button class="primary-btn" id="bannerSell">Share your harvest ↗</button>
+    </section>
+
+    <section class="steps">
+      <div class="section-heading centered">
+        <span class="eyebrow">SIMPLE AS PLANTING A SEED</span>
+        <h2>How Vegora <em>grows.</em></h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step">
+          <span>01</span>
+          <h3>Explore</h3>
+          <p>Find seeds, fruits, veggies and plants from local gardeners.</p>
+        </div>
+        <div class="step">
+          <span>02</span>
+          <h3>Connect</h3>
+          <p>Choose what you love and contact the seller to arrange a purchase.</p>
+        </div>
+        <div class="step">
+          <span>03</span>
+          <h3>Grow</h3>
+          <p>Enjoy your garden finds and share the goodness with others.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo" aria-label="Vegora home">
+      <img src="vegora-logo.png" alt="Vegora">
+    </a>
+    <p>Made with 🌱 for people who love to grow.</p>
+    <p class="copyright">© 2026 Vegora · Grow, Share, Thrive</p>
+  </footer>
+
+  <!-- SELL ITEM POPUP -->
+  <div class="modal-overlay" id="sellModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="sellTitle">
+      <button class="close-btn" id="closeSell" aria-label="Close">×</button>
+      <span class="eyebrow">YOUR GARDEN, YOUR MARKET</span>
+      <h2 id="sellTitle">List your garden goodie 🌱</h2>
+      <p class="modal-intro">Tell the community what you've grown.</p>
+
+      
+<form id="sellForm">
+  <label for="itemName">Product name</label>
+  <input id="itemName" name="itemName" required maxlength="60"
+    placeholder="e.g. Fresh garden tomatoes">
+
+  <div class="form-row">
+    <div>
+      <label for="itemCategory">Category</label>
+      <select id="itemCategory" name="itemCategory" required>
+        <option value="Seeds">Seeds</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Plants">Plants</option>
+      </select>
+    </div>
+    <div>
+      <label for="itemPrice">Price (₹)</label>
+      <input id="itemPrice" name="itemPrice" type="number"
+        min="1" max="100000" step="1" required placeholder="50">
+    </div>
+  </div>
+
+  <label for="itemUnit">Quantity / unit</label>
+  <input id="itemUnit" name="itemUnit" required maxlength="40"
+    placeholder="e.g. 500 g, 1 packet, 1 plant">
+
+  <label for="productImage">Product photo</label>
+<input
+  id="productImage"
+  name="productImage"
+  type="file"
+  accept="image/jpeg,image/png,image/webp,image/gif"
+  required
+>
+
+<div id="imagePreviewBox" hidden>
+  <img id="imagePreview" alt="Preview of your product photo">
+</div>
+  <p class="form-note">Choose a clear photo of your actual product. Maximum size: 5 MB.</p>
+
+  <div id="imagePreviewBox" hidden>
+    <img id="imagePreview" alt="Preview of your product photo">
+  </div>
+
+  <label for="sellerContact">Contact info (optional)</label>
+  <input id="sellerContact" name="sellerContact" maxlength="100"
+    placeholder="A safe way for buyers to contact you">
+
+  <button class="primary-btn full-btn" type="submit">
+    Add to marketplace →
+  </button>
+
+  <p class="form-note">
+    Demo mode: listings are visible only in this browser session.
+    Contact details are not published.
+  </p>
+</form>
+
+    </div>
+  </div>
+```html
+<!-- VEGORA LOGIN / SIGN UP POPUP -->
+<div class="modal-overlay" id="authModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="close-btn" id="closeAuth" type="button">×</button>
+
+    <span class="eyebrow">WELCOME TO VEGORA</span>
+    <h2 id="authTitle">Grow with us 🌱</h2>
+    <p class="modal-intro" id="authIntro">
+      Create an account or sign in to continue.
+    </p>
+
+    <form id="authForm">
+      <div id="nameField">
+        <label for="authName">Your name</label>
+        <input
+          id="authName"
+          type="text"
+          maxlength="60"
+          autocomplete="name"
+          placeholder="Your name"
+        >
+      </div>
+
+      <label for="authEmail">Email address</label>
+      <input
+        id="authEmail"
+        type="email"
+        required
+        autocomplete="email"
+        placeholder="you@example.com"
+      >
+
+      <label for="authPassword">Password</label>
+      <input
+        id="authPassword"
+        type="password"
+        required
+        minlength="6"
+        autocomplete="new-password"
+        placeholder="At least 6 characters"
+      >
+
+      <button class="primary-btn full-btn" id="authSubmit" type="submit">
+        Create account
+      </button>
+
+      <p id="authMessage" class="form-note" role="status"></p>
+    </form>
+
+    <p class="form-note">
+      Already have an account?
+      <button type="button" class="text-btn" id="authSwitch">
+        Log in instead
+      </button>
+    </p>
+  </div>
+</div>
+```
+  <!-- SHOPPING BASKET POPUP -->
+  <div class="modal-overlay" id="cartModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <button class="close-btn" id="closeCart" aria-label="Close">×</button>
+      <span class="eyebrow">YOUR GARDEN FINDS</span>
+      <h2 id="cartTitle">Your basket 🧺</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total" id="cartTotal"></div>
+      <p class="form-note">Demo basket only. No payments are processed.</p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
